@@ -4,14 +4,13 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "gititback-gem"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.name = "gititback"
+    gem.summary = %Q{GitItBack Server Backup and Recovery System}
+    gem.description = %Q{Uses git to store backups of critical system data}
     gem.email = "github@tadman.ca"
-    gem.homepage = "http://github.com/tadman/gititback-gem"
-    gem.authors = ["tadman"]
+    gem.homepage = "http://github.com/theworkinggroup/gititback"
+    gem.authors = %w[ theworkinggroup tadman ]
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
@@ -46,7 +45,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "gititback-gem #{version}"
+  rdoc.title = "gititback #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
